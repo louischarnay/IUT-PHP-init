@@ -8,32 +8,8 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-<div id="header">
-    <p id="titrePablo">Pablo</p>
-    <img src="img/logo_html.png" alt=" logo HTML" id="logo">
-    <p id="titreGuinard">GUINARD</p>
-    <h1 id="hidden">ACCUEIL</h1>
-</div>
-<header>
-    <div id="menu">
-        <nav>
-            <ul>
-                <li><a href="index.php" class="menuSelected">ACCUEIL</a></li>
-                <li><a href="contact.php">CONTACT</a></li>
-                <li><a href="inscription.php">INSCRIPTION</a></li>
-                <li id="blog"><a href="">BLOG</a>
-                    <ul id="sousMenu">
-                        <li><a href="" class="menuSelected">BLOG</a></li>
-                        <li><a href="minecraft-live-is-back-once-again.php" class="sousMenuArticle">MINECRAFT</a></li>
-                        <li><a href="what-is-cryptomining.php" class="sousMenuArticle">CRYPTOMINING</a></li>
-                        <li><a href="nintendo-could-add-game-boy-game-boy-color.php" class="sousMenuArticle">NINTENDO</a></li>
-                    </ul>
-                </li>
-                <li id="chiffres"><a href="chiffres.php">CHIFFRES</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<?php include 'modules/banner.php'?>
+<?php include 'modules/header.php'?>
 <main>
     <h2 data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out">CHIFFRES</h2>
     <p class="center"><em>Lorem ipsum</em> dolor sit amet, consectetur adipiscing elit. Maecenas odio enim, pellentesque ut vulputate quis,
@@ -256,18 +232,8 @@
         </table>
     </section>
 </main>
-<footer>
-    <img src="img/logoUCBL.png" id="logoUCBL" alt="Logo Université Claude Bernard Lyon 1">
-    <div id="footerP">
-        <p>Copyright © Pablo Guinard 2021</p>
-        <p>Tous droits d'auteur réservés</p>
-    </div>
-    <div id="footerA">
-        <a href="contact.php">Contact</a>
-        <a href="#art1">Présentation</a>
-        <a href="#art3">Article récent</a>
-    </div>
-</footer>
+
+<?php include 'modules/footer.php'?>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();

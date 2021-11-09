@@ -5,36 +5,13 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <title>Blog - Cryptomining</title>
 </head>
 <body>
-<div id="header">
-    <p id="titrePablo">Pablo</p>
-    <img src="img/logo_html.png" alt=" logo HTML" id="logo">
-    <p id="titreGuinard">GUINARD</p>
-</div>
-<header>
-    <div id="menu">
-        <nav>
-            <ul>
-                <li><a href="index.php">ACCUEIL</a></li>
-                <li><a href="">FEATURES</a></li>
-                <li><a href="">LIVE</a></li>
-                <li id="blog"><a href="" class="menuSelected">BLOG</a>
-                    <ul id="sousMenu">
-                        <li><a href="" class="menuSelected">BLOG</a></li>
-                        <li><a href="minecraft-live-is-back-once-again.php" class="sousMenuArticle">MINECRAFT</a></li>
-                        <li><a href="what-is-cryptomining.php" class="sousMenuArticle">CRYPTOMINING</a></li>
-                        <li><a href="nintendo-could-add-game-boy-game-boy-color.php" class="sousMenuArticle">NINTENDO</a></li>
-                    </ul>
-                </li>
-                <li id=""><a href="">TECH</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
+<?php include '/modules/banner.php'?>
+<?php include '/modules/header.php'?>
 <main id="mainArticle">
         <article>
                 <section class="title-group">
@@ -186,18 +163,7 @@
         </div>
     </div>
 </section>
-<footer>
-    <img src="img/logoUCBL.png" id="logoUCBL" alt="Logo Université Claude Bernard Lyon 1">
-    <div id="footerP">
-        <p>Copyright © Pablo Guinard 2021</p>
-        <p>Tous droits d'auteur réservés</p>
-    </div>
-    <div id="footerA">
-        <a href="contact.php">Contact</a>
-        <a href="#art1">Présentation</a>
-        <a href="#art3">Article récent</a>
-    </div>
-</footer>
+<?php include '/modules/footer.php'?>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();
