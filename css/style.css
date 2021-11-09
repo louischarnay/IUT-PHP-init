@@ -863,7 +863,7 @@ input#ville:focus~#labelVille{
     text-align: center;
 }
 
-#tabChiffres table tbody tr td{
+#tabChiffres table tbody tr td, #tabChiffres table tbody tr th{
     padding: 2vw 0;
     border: solid 0.4vw var(--couleurOrange);
 
