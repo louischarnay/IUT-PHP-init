@@ -1,0 +1,923 @@
+:root{
+    --couleurNoir: #000000;
+    --couleurOrange: #E55126;
+    --couleurBlanc: #eae3e1;
+    --couleurGris: #383838;
+    --couleurNoirTransparent: rgba(0, 0, 0, 0.6);
+}
+
+.orange{
+    --couleurNoir: #000000;
+    --couleurOrange: #E55126;
+    --couleurBlanc: #eae3e1;
+    --couleurGris: #383838;
+}
+
+.jaune{
+    --couleurNoir: #383838;
+    --couleurOrange: #F1BF26;
+    --couleurBlanc: #eae3e1;
+    --couleurGris: #000000;
+}
+
+.bleu{
+    --couleurNoir: #383838;
+    --couleurOrange: #30A9DC;
+    --couleurBlanc: #00000;
+    --couleurGris: #eae3e1;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/Futura Medium.otf');
+}
+
+body{
+    font-family: Futura;
+    background-color: var(--couleurGris);
+    color: var(--couleurBlanc);
+
+}
+
+p{
+    margin: 0 2vw;
+    font-size: 1.2rem;
+    font-family: Futura;
+    font-weight: normal;
+}
+
+main{
+    display: inline-block;
+    width: 100%;
+}
+
+#header{
+    height: 10vw;
+    display: flex;
+    justify-content: center;
+    background-color: var(--couleurNoir);
+    padding: 1vw 0;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+#logo{
+    height: 8vw;
+    position: absolute;
+}
+
+#titrePablo, #titreGuinard{
+    color: var(--couleurBlanc);
+    font-size: 2.5vw;
+    font-family: Futura;
+    font-weight: bolder;
+    margin: auto;
+    height: 6vw;
+    line-height: 6vw;
+}
+
+#titreGuinard{
+    color: var(--couleurOrange);
+}
+
+#menu{
+    position: sticky;
+    font-weight: bold;
+    top: 0;
+    width: 100%;
+    background-color: var(--couleurNoirTransparent);
+    z-index: 2;
+}
+
+nav ul{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+ nav ul li{
+    display: inline-block;
+     text-align: center;
+}
+
+nav ul li a, .pBlog{
+    display: block;
+    padding: 1vw 0;
+    text-decoration: none;
+    font-size: 1.5vw;
+    font-family: Futura;
+    color: var(--couleurBlanc);
+    font-weight: bold;
+}
+
+nav ul li a:hover{
+    background-color: var(--couleurNoir);
+    text-decoration: none;
+}
+
+#hidden{
+    display: none;
+}
+
+a{
+    color: var(--couleurOrange);
+    text-decoration: none;
+}
+
+a:hover{
+    color: var(--couleurBlanc);
+    text-decoration: underline;
+}
+
+#blog:hover #sousMenu{
+    display: flex;
+}
+
+.title-group{
+    text-align: center;
+    margin-top: 5vw;
+}
+
+h1{
+    font-size: 2em;
+    margin: auto;
+    display: inline-block;
+    border: solid var(--couleurOrange) 0.5vw;
+    padding: 1vw;
+}
+
+.sousMenuArticle:hover{
+    color: var(--couleurOrange);
+}
+
+#sousMenu{
+    display: none;
+    top: 0vw;
+    position: absolute;
+    flex-direction: column;
+    width: 20%;
+}
+
+#sousMenu li {
+    display: list-item;
+    list-style: none;
+    background-color: var(--couleurNoir);
+}
+
+
+.menuSelected{
+    color: var(--couleurOrange);
+}
+
+footer{
+    position: static;
+    bottom: 0;
+    margin-top: 5vw;
+    background-color: var(--couleurNoir);
+    color: var(--couleurBlanc);
+    line-height: 1.2vw;
+    height: 6vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+#footerP {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+footer p{
+    font-size: 1.2rem;
+}
+
+#footerA{
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+footer a{
+    color: var(--couleurOrange);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+footer a:hover{
+    color: var(--couleurBlanc);
+}
+
+h2{
+    font-family: Futura;
+    font-weight: normal;
+    color: var(--couleurOrange);
+    font-size: 2vw;
+    text-decoration: underline var(--couleurOrange);
+    padding: 5vw 0 3.5vw 0;
+    text-align: center;
+    transition: 1s;
+}
+
+h3{
+    font-family: Futura;
+    color: var(--couleurOrange);
+    text-decoration: underline var(--couleurOrange);
+    padding: 2vw 0 2vw 12vw;
+    font-size: 6vw;
+}
+
+#image{
+    margin: 0 3vw 0 3vw;
+    float: left;
+}
+
+blockquote{
+    margin-left: 3vw;
+}
+
+label{
+    grid-column: 2/5;
+    font-size: 1.5vw;
+    text-align: right;
+    color: var(--couleurBlanc);
+    font-family: Futura;
+    transition: 0.5s;
+}
+
+input{
+    grid-column: 2/5;
+    font-size: 1.2rem;
+    border-radius: 0 0 3vw 1vw;
+    padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+    border: solid var(--couleurOrange) 0.4vw;
+    color: var(--couleurBlanc);
+    font-family: Futura;
+    background-color: var(--couleurGris);
+    height: 100%;
+}
+
+input:focus{
+    background-color: var(--couleurBlanc);
+    color: var(--couleurGris);
+}
+
+#sujet.inputContact, #nom.inputContact, #prenom.inputContact, #mail.inputContact, #tel.inputContact{
+    grid-column: 2;
+}
+
+textarea{
+    font-size: 1.2rem;
+    grid-column: 2;
+    border-radius: 0 0 3vw 1vw;
+    padding: 0.5vw 1vw 0.5vw 1vw;
+    border: solid var(--couleurOrange) 0.5vw;
+    font-family: Futura;
+    height: 100%;
+    color: var(--couleurBlanc);
+    background-color: var(--couleurGris);
+    resize: none;
+}
+
+textarea:focus{
+    color: var(--couleurGris);
+    background-color: var(--couleurBlanc);
+}
+
+textarea::-webkit-scrollbar {
+    display: none;
+}
+
+fieldset{
+    display: inline-flex;
+    font-size: 2vw;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid var(--couleurBlanc) 0.5vw;
+    width: 100%;
+}
+
+legend{
+    color: var(--couleurOrange);
+    font-family: Futura;
+    text-decoration: underline;
+}
+
+.pLabel{
+    grid-column: 2/5;
+    text-align: right;
+    margin: 0;
+}
+
+#formContact, #formInscription{
+    margin-top: 5vw;
+    width: 40%;
+    margin-left: 7%;
+    display: inline-block;
+}
+
+#coordonnées{
+    display: inline;
+    width: 40%;
+    float: right;
+    margin-right: 7%;
+    margin-top: 5vw;
+    position: relative;
+    bottom: 0;
+}
+
+#coordonnées p{
+    margin-left: 0
+}
+
+#formulaireInscription{
+    display: grid;
+    grid-template-columns: 5% 30% 30% 30% 5%;
+    grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 7rem 3rem 3rem 9rem;
+    align-items: end;
+    width: 100%;
+    height: 100%;
+}
+
+#formulaireContact{
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+    grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 10rem 9rem;
+    text-align: center;
+    width: 100%;
+    align-items: end;
+}
+
+button:hover{
+    color: var(--couleurBlanc);
+}
+
+.imgOui, .imgNon{
+    width: 3vw;
+}
+
+td img{
+    display: block;
+    margin: 0.5vw auto;
+}
+
+#tabHoraire{
+    border-collapse: collapse;
+    font-size: 1.2rem;
+    font-family: Futura;
+    border: solid 0.5vw var(--couleurBlanc);
+    border-radius: 1vw;
+    width: 100%;
+    margin-top: 1vw;
+}
+
+#thHoraires{
+    padding-top: 4vw;
+}
+
+#titreHoraires, #titreTrouvezMoi, #titreAside, #titreTab{
+    position: absolute;
+    background-color: var(--couleurGris);
+    padding: 0;
+    margin-left: 30%;
+}
+
+#titreTrouvezMoi{
+    margin-top: 3.5vw;
+}
+
+th{
+    font-weight: normal;
+    margin: 4vw 2vw 4vw 2vw;
+    padding: 0 2vw 0 2vw;
+}
+
+.ligne, .ligneHaut{
+    border: solid 0.4vw var(--couleurOrange);
+}
+
+.ligneHaut{
+    padding: 1.5vw;
+}
+
+#divTrouvezMoi{
+    border: solid 0.5vw var(--couleurBlanc);
+    margin-top: 4.5vw;
+    padding-top: 2vw;
+}
+
+#texteTouvezMoi{
+    margin: 2vw;
+}
+
+.sousTitreTrouvezMoi{
+    font-family: Futura;
+    color: var(--couleurOrange);
+}
+
+#checkBox{
+    grid-column-start: 1;
+}
+
+#radio{
+    grid-column: 2/5;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#labelfemme, #labelhomme, #labelnonrenseigne{
+    width: 25%;
+    text-align: center;
+    border: solid var(--couleurBlanc) 0.4vw;
+    padding: 0.4vw 0;
+    color: var(--couleurOrange);
+    font-size: 1.2rem;
+}
+
+#labelnonrenseigne{
+    width: 40%;
+}
+
+#labelfemme{
+    border-bottom-right-radius: 3vw;
+}
+
+#labelhomme{
+    border-bottom-left-radius: 1vw;
+}
+
+label.labelContact{
+    grid-column: 2;
+}
+
+
+button{
+    font-size: 1.2rem;
+    background-color: var(--couleurOrange);
+    font-family: Futura;
+    color: var(--couleurGris);
+    padding: 1vw 1.5vw;
+    border: 1vw;
+    border-radius: 3vw;
+    grid-column: 2;
+    grid-row: 13;
+    width: 45%;
+    margin: 2vw 0;
+}
+
+#divButtons{
+    grid-column: 2;
+    grid-row: 13;
+    display: flex;
+    justify-content: space-between;
+}
+
+#divButtonsInscription{
+    grid-row: 27;
+    grid-column: 2/5;
+    display: flex;
+    justify-content: space-between;
+}
+
+input.inputSexe{
+    display: none;
+}
+
+input.inputSexe:checked + label {
+    background-color: var(--couleurBlanc);
+}
+
+input.checkBox{
+    display: none;
+}
+
+input.checkBox:checked + label{
+    background-color: var(--couleurBlanc);
+}
+
+label.labelLoisir{
+    color: var(--couleurOrange);
+    width: 30%;
+    font-size: 1.2rem;
+    text-align: center;
+    border: solid var(--couleurBlanc) 0.4vw;
+    padding: 0.5vw 0;
+}
+
+#labelLexture{
+    border-bottom-left-radius: 1vw;
+    margin-left: 0;
+}
+
+#labelCinema{
+    border-bottom-right-radius: 3vw;
+    margin-right: 0;
+}
+
+#divLoisirs{
+    grid-column: 2/5;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 100%;
+}
+
+#photo{
+    display: none;
+}
+
+#divPhoto{
+    grid-column: 2/5;
+    ;
+    border-top-left-radius: 2.5vw;
+    border-bottom-left-radius: 2.5vw;
+    border-bottom-right-radius: 5vw;
+    border-top-right-radius: 1.5vw;
+    padding: 1.5vw 3vw 1.5vw 3vw;
+    border: solid var(--couleurOrange) 0.5vw;
+}
+
+#textePhoto{
+    font-size: 3.5vw;
+    font-family: Futura;
+}
+
+#couleur{
+    grid-column: 2/5;
+    width: 100%;
+}
+
+#labelphoto{    grid-column: 2/5;
+    border-radius: 0 0 3vw 1vw;
+    border: solid var(--couleurBlanc) 0.7vw;
+    color: var(--couleurOrange);
+    background-color: var(--couleurBlanc);
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#logoUCBL{
+    margin-left: 2vw;
+}
+
+#paragraphesAccueil{
+    padding-top: 8vw;
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
+    text-align: justify;
+}
+
+#menuCache{
+    display: none;
+}
+
+.imgAccueil{
+    height: 15vw;
+    margin: 2vw 25% 3vw 25%;
+    cursor: pointer;
+}
+
+#fondCouleurAccueil{
+    border: solid 2vw var(--couleurOrange);
+    border-radius: 0.5vw 0.5vw 15vw 5vw;
+    position: absolute;
+    background-color: var(--couleurOrange);
+    width: 90%;
+    height: 19vw;
+    z-index: -1;
+}
+
+abbr{
+    color: var(--couleurOrange);
+    text-decoration: underline solid var(--couleurOrange);
+    font-weight: bold;
+}
+
+.center{
+    text-align: center;
+}
+
+#auteur{
+    text-align: left;
+    margin-left: 2vw;
+}
+
+#mainArticle{
+    width: 70%;
+    margin-left: 2vw;
+    display: inline-block;
+}
+
+#imgMinecraft{
+    width: 100%;
+    padding: 0.5vw 0 2vw 0;
+}
+
+#share{
+    display: inline-block;
+    margin-right: 0;
+    padding-bottom: 0.5vw;
+    color: var(--couleurOrange);
+}
+
+.reseauSocial{
+    display: inline-block;
+    margin: 0 0.5vw;
+}
+
+.noMargin{
+    margin-left: 0;
+}
+
+aside{
+    display: inline-block;
+    width: 25%;
+    float: right;
+    padding-right: 2vw;
+}
+
+#asideArticle{
+    border: solid 0.5vw var(--couleurBlanc);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 4vw;
+}
+
+#asideArticle li{
+    padding-bottom: 5vw;
+}
+
+#asideArticle li a{
+    font-size: 1.2rem;}
+
+#titreAside{
+    margin-left: 22%;
+    top: -1vw;
+}
+
+#navAside{
+    position: relative;
+    margin-top: 5vw;
+}
+
+.commentaire{
+    display: grid;
+    grid-template-rows: 1.5rem 9rem;
+    grid-template-columns: 9rem 70vw;
+    row-gap: 1rem;
+    margin: 2rem 2vw;
+    column-gap: 1vw;
+    border: solid 0.5vw var(--couleurOrange);
+    border-radius: 0.5vw 0.5vw 15vw 5vw;
+    padding: 2vw;
+    height: 16rem;
+}
+
+.bloc-contenu{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.photoProfil{
+    border: solid 0.5vw var(--couleurBlanc);
+    border-radius: 0 0 3vw 1vw;
+    overflow: hidden;
+    grid-row: 2;
+    grid-column: 1;
+    margin-left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.commentaire a span{
+    color: var(--couleurBlanc);
+    margin-left: 0;
+}
+
+.commentaire a img{
+    width: 100%;
+    height: 100%;
+}
+
+#ulArticle{
+    font-size: 1.2rem;
+    margin:1vw 4vw;
+
+}
+
+#asideArticle li a:hover{
+    background-color: var(--couleurGris);
+    color: var(--couleurOrange);
+    border: solid 0.1vw var(--couleurOrange)
+}
+
+input#sujet:focus~#labelSujet{
+    transform: translateX(-31.5vw);
+}
+
+input#mail:focus~#labelEmail{
+    transform: translateX(-31vw);
+}
+
+input#tel:focus~#labelTel{
+    transform: translateX(-28vw);
+}
+
+input#nom:focus~#labelNom{
+    transform: translateX(-31.3vw);
+}
+
+input#prenom:focus~#labelPrenom{
+    transform: translateX(-29.8vw);
+}
+
+textarea#message:focus~#labelMessage{
+    transform: translateX(-25.3vw);
+}
+
+#labelSujet{
+    grid-row: 1;
+}
+
+#labelEmail{
+    grid-row: 3;
+}
+
+#labelTel{
+    grid-row: 5;
+}
+
+#labelNom{
+    grid-row: 7;
+}
+
+#labelPrenom{
+    grid-row: 9;
+}
+
+#labelMessage{
+    grid-row: 11;
+}
+
+#labelEmail2{
+    grid-row: 1;
+}
+
+#labelMdp{
+    grid-row: 3;
+}
+
+#labelMdp2{
+    grid-row: 5;
+}
+
+#labelNom2{
+    grid-row: 7;
+}
+
+#labelPrenom2{
+    grid-row: 9;
+}
+
+#labelNaissance{
+    grid-row: 11;
+}
+
+#labelAdresse{
+    grid-row: 13;
+}
+
+#labelCodePostal{
+    grid-row: 15;
+}
+
+#labelVille{
+    grid-row: 17;
+}
+
+input#email:focus~#labelEmail2{
+    transform: translateX(-31vw);
+}
+
+input#mdp:focus~#labelMdp{
+    transform: translateX(-26vw);
+}
+
+input#mdp2:focus~#labelMdp2{
+    transform: translateX(-16.4vw);
+}
+
+input#nom:focus~#labelNom2{
+    transform: translateX(-31.5vw);
+}
+
+input#prenom:focus~#labelPrenom2{
+    transform: translateX(-29.8vw);
+}
+
+input#date_naissance:focus~#labelNaissance{
+    transform: translateX(-23vw);
+}
+
+input#adresse:focus~#labelAdresse{
+    transform: translateX(-29.5vw);
+}
+
+input#code_postal:focus~#labelCodePostal{
+    transform: translateX(-27vw);
+}
+
+input#ville:focus~#labelVille{
+    transform: translateX(-31.8vw);
+}
+
+#tabChiffres{
+    margin: 5vw 2vw;
+    display: inline-block;
+    width: 95%;
+}
+
+#tableau{
+    margin-top: 1vw;
+    border: solid 0.5vw var(--couleurBlanc);
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+#tabChiffres table tbody tr td{
+    padding: 2vw 0;
+    border: solid 0.4vw var(--couleurOrange);
+
+}
+
+#titreTab{
+    margin-left: 41%;
+}
+
+@media (max-width: 575px) {
+
+    footer p, footer a, nav ul li a, .pBlog{
+        font-size: 0.5rem;
+    }
+
+    footer{
+        height: 10vw;
+    }
+
+    p, label, #tabHoraire, fieldset, #titreHoraires, #titreTrouvezMoi, h2, #titrePablo, #titreGuinard{
+        font-size: 1rem;
+    }
+
+    #formInscription, #coordonnées, #formContact, #mainArticle, aside{
+        display: block;
+        margin: 5vw 5%;
+        width: 90%;
+        float: left;
+    }
+
+    #fondCouleurAccueil{
+        display: none;
+    }
+
+    #paragraphesAccueil{
+        display: inline-block;
+        width: 100%;
+    }
+
+    .imgAccueil{
+        margin: 5vw 0 1vw 45vw;
+        cursor: pointer;
+    }
+
+    #blog:active #sousMenu{
+        display: flex;
+    }
+
+    .commentaire{
+        display: inline-grid;
+        border: none;
+        width: 90%;
+        grid-template-columns: 7rem 65vw;
+        grid-template-right: 1.5rem 7rem;
+        margin-bottom: 30vw;
+    }
+}
