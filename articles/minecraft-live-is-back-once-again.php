@@ -10,8 +10,8 @@
     <title>Blog - Minecraft</title>
 </head>
 <body>
-<?php include '/modules/banner.php'?>
-<?php include '/modules/header.php'?>
+<?php include '../modules/banner.php'?>
+<?php include '../modules/header.php'?>
 <main id="mainArticle">
     <article>
         <section class="title-group">
@@ -156,7 +156,7 @@
             </div>
         </div>
     </section>
-<?php include '/modules/footer.php'?>
+<?php include '../modules/footer.php'?>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init();

@@ -1,3 +1,4 @@
+<?php include_once __DIR__."/../include/config.php"?>
 <section id="coordonnées" data-aos="slide-left" data-aos-duration="1000" data-aos-easing="ease-out">
     <h2 id="titreHoraires">MES HORAIRES</h2>
     <table id="tabHoraire">
@@ -18,11 +19,11 @@
     <div id="divTrouvezMoi">
         <div id="texteTouvezMoi">
             <p class="sousTitreTrouvezMoi">Email :</p>
-            <p>pablo.guinard@etu.univ-lyon1.fr</p>
+            <p><?= MAIL?></p>
             <p class="sousTitreTrouvezMoi">Tel :</p>
-            <p>06 68 39 32 21</p>
+            <p><?= NUMTEL?></p>
             <p class="sousTitreTrouvezMoi">Adresse :</p>
-            <p>6 rue de la Paix 01000 Bourg-en-Bresse</p>
+            <p><?= ADRESSE?></p>
         </div>
     </div>
 </section>
