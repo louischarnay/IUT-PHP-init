@@ -11,9 +11,10 @@
 <?php include 'modules/header.php'?>
 <main>
     <section id="tabChiffres">
+        <h2>Réponse du formulaire</h2>
         <table id="tableau">
             <thead>
-            <tr><th colspan="4">Résultats Formulaire Contact</th></tr>
+            <tr><th colspan="2">Résultats Formulaire Contact</th></tr>
             </thead>
             <tbody>
             <tr>

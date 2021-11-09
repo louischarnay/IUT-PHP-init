@@ -14,6 +14,7 @@
                     </ul>
                 </li>
                 <li id="chiffres"><a href="/chiffres.php">CHIFFRES</a></li>
+                <li><a href="/login.php">LOGIN</a></li>
             </ul>
         </nav>
     </div>

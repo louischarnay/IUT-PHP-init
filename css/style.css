@@ -102,7 +102,7 @@ header{
 nav ul{
     width: 100%;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 16.7% 16.7% 16.7% 16.7% 16.7% 16.7%;
 }
 
  nav ul li{
