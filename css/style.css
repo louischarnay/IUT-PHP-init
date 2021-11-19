@@ -35,7 +35,7 @@
 
 @font-face {
     font-family: 'Futura';
-    src: url('fonts/Futura Medium.otf');
+    src: url('/fonts/Futura Medium.otf');
 }
 
 body{
