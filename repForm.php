@@ -1,8 +1,9 @@
+<?php include_once __DIR__."/../include/config.php"?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
-    <title>Contact</title>
+    <title>Reponse au formulaire contact</title>
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
@@ -19,7 +20,9 @@
             <tbody>
             <tr>
                 <th>Sujet</th>
-                <td><?php echo $_POST["sujet"]?></td>
+                <td><?php
+                    if ("admin" == true)
+                    echo $_POST["sujet"]?></td>
             </tr>
             <tr>
                 <th>Email</th>

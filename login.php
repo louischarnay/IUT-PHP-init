@@ -1,9 +1,10 @@
+<?php session_start()?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.8">
-    <title>Inscription</title>
+    <title>Connexion</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
@@ -16,8 +17,8 @@
             <fieldset>
                 <legend>INSCRIPTION</legend>
                 <div id="formulaireInscription">
-                    <input type="email" name="email" id="email" required="required">
-                    <label for="email" id="labelEmail2">Login</label>
+                    <input type="text" name="username" id="username" required="required">
+                    <label for="username" id="labelEmail2">Login</label>
                     <input type="password" name="mdp" id="mdp" required="required">
                     <label for="mdp" id="labelMdp">Mot de passe</label>
                     <div id="divButtonsInscription">

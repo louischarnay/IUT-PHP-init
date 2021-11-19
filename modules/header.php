@@ -1,3 +1,4 @@
+<?php include_once __DIR__."/../include/config.php"?>
 <header>
     <div id="menu">
         <nav>
@@ -14,7 +15,15 @@
                     </ul>
                 </li>
                 <li id="chiffres"><a href="/chiffres.php">CHIFFRES</a></li>
-                <li><a href="/login.php">LOGIN</a></li>
+                <li>
+                    <?php
+                    if(isset($_SESSION['admin'])): ?>
+                        <a href="/decoTraitement.php">DECONNEXION</a>
+                    <?php else: ?>
+                        <a href="/login.php">LOGIN</a>
+                    <?php endif ?>
+
+                </li>
             </ul>
         </nav>
     </div>
