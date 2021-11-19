@@ -28,7 +28,12 @@
         </section>
         <div class="wrapper" id="article">
             <picture class="intro-pic">
-                <img src="../img/Minecraft-Live-030921.webp" alt="image Minecraft" id="imgMinecraft">
+                <?php if($_SERVER['HTTP_ACCEPT'] == 'image/webp'): ?>
+                    <img src="../img/Minecraft-Live-030921.webp" alt="image Minecraft" id="imgMinecraft">
+                <?php else: ?>
+                    <img src="../img/minecraft.jpg" alt="image Minecraft" id="imgMinecraft">
+                <?php endif; ?>
+                
             </picture>
             <div class="articleBody">
                 <p class="noMargin">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium blanditiis consectetur,

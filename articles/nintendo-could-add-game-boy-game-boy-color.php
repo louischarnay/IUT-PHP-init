@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<?php include '/modules/banner.php'?>
-<?php include '/modules/header.php'?>
+<?php include '../modules/banner.php'?>
+<?php include '../modules/header.php'?>
     <main id="mainArticle">
         <article>
             <section class="title-group">
