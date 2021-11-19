@@ -9,8 +9,13 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-<?php include 'modules/banner.php'?>
-<?php include 'modules/header.php'?>
+<?php
+include "class/db.php";
+include 'modules/banner.php';
+include 'modules/header.php';
+$db1 = new db();
+$db1->connection();
+?>
 <main>
     <h2 data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out">PRESENTATION</h2>
     <p class="center"><em>Lorem ipsum</em> dolor sit amet, consectetur adipiscing elit. Maecenas odio enim, pellentesque ut vulputate quis,
