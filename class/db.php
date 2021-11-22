@@ -9,7 +9,11 @@ class db {
         catch (PDOException $e) {
             echo 'Connexion échouée : ' . $e->getMessage();
         }
-            echo 'Connexion à la base réussie';
+    }
+
+    public function dateUpdate(){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $pdo->exec("UPDATE users SET updated=date('now')");
     }
 }
 ?>
