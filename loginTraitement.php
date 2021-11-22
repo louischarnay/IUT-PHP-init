@@ -10,7 +10,6 @@ else {
     header("Location: ../index.php");
 }
 
-$_SESSION['username'] = $_POST["username"];
 
 if(isset($_POST["enregistrer"])){
     setcookie("usernameEnregistre", $_POST["username"], time() + 8400, '/');
