@@ -17,10 +17,12 @@
             <fieldset>
                 <legend>INSCRIPTION</legend>
                 <div id="formulaireInscription">
-                    <input type="text" name="username" id="username" required="required">
-                    <label for="username" id="labelEmail2">Login</label>
-                    <input type="password" name="mdp" id="mdp" required="required">
-                    <label for="mdp" id="labelMdp">Mot de passe</label>
+                    <input type="text" name="username" id="usernameEnregistrer" required="required" value=<?php echo $_COOKIE["usernameEnregistre"]??"" ?>>
+                    <label for="usernameEnregistrer" id="labelEmail2">Login</label>
+                    <input type="password" name="mdp" id="mdpEnregeistrer" required="required" value=<?php echo $_COOKIE["mdpEnregistre"]??""?>>
+                    <label for="mdpEnregeistrer" id="labelMdp">Mot de passe</label>
+                    <input type="checkbox" name="enregistrer" id="enregistrer" value="Enregistrer" class="checkBox">
+                    <label id="labelSport" for="enregistrer" class="labelLoisir">S'enregistrer</label>
                     <div id="divButtonsInscription">
                         <button type="submit" class="envoyerInscription">Se connecter</button>
                         <button type="reset" class="effacerInscription">Effacer</button>

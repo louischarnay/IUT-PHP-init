@@ -1,11 +1,6 @@
 <div id="header">
-    <p id="titrePablo">Pablo</p>
+    <p id="titrePablo">Bienvenue</p>
     <img src="/img/logo_html.png" alt=" logo HTML" id="logo">
-    <?php
-    if(isset($_SESSION['admin']) && $_SESSION['admin']): ?>
-        <p id="titreGuinard">ADMIN</p>
-    <?php else: ?>
-        <p id="titreGuinard">GUINARD</p>
-    <?php endif ?>
+    <p id="titreGuinard"><?php echo $_SESSION['username']??"Invité"?></p>
     <h1 id="hidden">ACCUEIL</h1>
 </div>
