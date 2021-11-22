@@ -32,5 +32,11 @@
         </library>
       </libraries>
     </data-source>
+    <data-source source="LOCAL" name="User Data Source" uuid="9e9f611d-6289-4059-965f-afa460d39ede">
+      <synchronize>true</synchronize>
+      <configured-by-url>true</configured-by-url>
+      <jdbc-driver>java.sql.Driver</jdbc-driver>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
   </component>
 </project>
