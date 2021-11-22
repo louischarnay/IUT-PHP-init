@@ -7,7 +7,7 @@ if ($db1->fecthPerson($_POST["username"], $_POST["mdp"]) == true) {
     header("Location: ../index.php");
 }
 else {
-    header("Location: ../index.php");
+    header("Location: ../login.php");
 }
 
 
