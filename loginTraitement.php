@@ -3,7 +3,11 @@ session_start();
 include "class/db.php";
 $db1 = new db();
 if ($db1->fecthPerson($_POST["username"], $_POST["mdp"]) == true) {
-    $_SESSION['admin'] = true; 
+    $_SESSION['admin'] = true;
+    header("Location: ../index.php");
+}
+else {
+    header("Location: ../index.php");
 }
 
 $_SESSION['username'] = $_POST["username"];
@@ -16,5 +20,3 @@ else{
     setcookie("usernameEnregistre", "", time() - 3600, '/');
     setcookie("mdpEnregistre", "", time() - 3600, '/');
 }
-
-header("Location: ../index.php");

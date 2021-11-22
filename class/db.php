@@ -23,7 +23,10 @@ class db {
             'email' => $username
         ]);
         $result = $sth->fetch();
-        if ($result[4] == $passwd){
+        if ($result == false){
+            return false;
+        }
+        if ($result['password'] == $passwd){
             return true;
         }
         return false;
