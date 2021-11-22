@@ -15,7 +15,7 @@
     <section id="formInscription">
         <form id="formulaire" data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out" action="loginTraitement.php" method="post" enctype="multipart/form-data">
             <fieldset>
-                <legend>INSCRIPTION</legend>
+                <legend>CONNEXION</legend>
                 <div id="formulaireInscription">
                     <input type="text" name="username" id="username" required="required">
                     <label for="username" id="labelEmail2">Login</label>

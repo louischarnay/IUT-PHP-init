@@ -15,5 +15,18 @@ class db {
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
         $pdo->exec("UPDATE users SET updated=date('now')");
     }
+
+    public function fecthPerson(string $username, string $passwd) {
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT * FROM users WHERE email= :email");
+        $sth->execute([
+            'email' => $username
+        ]);
+        $result = $sth->fetch();
+        if ($result[4] == $passwd){
+            return true;
+        }
+        return false;
+    }
 }
 ?>
