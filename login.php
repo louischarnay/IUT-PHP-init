@@ -12,11 +12,11 @@
 <?php include 'modules/banner.php'?>
 <?php include 'modules/header.php'?>
 <main>
-    <section id="formInscription">
+    <section id="formConnexion">
         <form id="formulaire" data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out" action="loginTraitement.php" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>CONNEXION</legend>
-                <div id="formulaireInscription">
+                <div id="formulaireConnexion">
                     <input type="text" name="username" id="usernameEnregistrer" required="required" value=<?php echo $_COOKIE["usernameEnregistre"]??"" ?>>
                     <label for="usernameEnregistrer" id="labelEmail2">Login</label>
                     <input type="password" name="mdp" id="mdpEnregeistrer" required="required" value=<?php echo $_COOKIE["mdpEnregistre"]??""?>>
