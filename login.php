@@ -22,7 +22,11 @@
                     <input type="password" name="mdp" id="mdpEnregeistrer" required="required" value=<?php echo $_COOKIE["mdpEnregistre"]??""?>>
                     <label for="mdpEnregeistrer" id="labelMdp">Mot de passe</label>
                     <div id="divMessageIncorrect">
-                        <p id="messageIncorrect">Adresse email ou mot de passe incorrect</p>
+                        <p id="messageIncorrect">
+                            <?php if(isset($_SESSION["mdpIncorrect"]) == true) {
+                                echo "Adresse email ou mot de passe incorrect";
+                            }?>
+                        </p>
                     </div>
                     <input type="checkbox" name="enregistrer" id="enregistrer" value="Enregistrer" class="checkBox">
                     <label id="labelEnregistrer" for="enregistrer" class="labelLoisir">S'enregistrer</label>
