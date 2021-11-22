@@ -31,5 +31,35 @@ class db {
         }
         return false;
     }
+
+    public function getNom(string $username){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT * FROM users WHERE email= :email");
+        $sth->execute([
+            'email' => $username
+        ]);
+        $result = $sth->fetch();
+        if ($result == false){
+            return null;
+        }
+        else {
+            return $result['lastname'];
+        }
+    }
+
+    public function getPrenom(string $username){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT * FROM users WHERE email= :email");
+        $sth->execute([
+            'email' => $username
+        ]);
+        $result = $sth->fetch();
+        if ($result == false){
+            return null;
+        }
+        else {
+            return $result['name'];
+        }
+    }
 }
 ?>

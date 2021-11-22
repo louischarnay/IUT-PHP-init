@@ -17,7 +17,7 @@
                 <li id="chiffres"><a href="/chiffres.php">CHIFFRES</a></li>
                 <li>
                     <?php
-                    if(isset($_SESSION['admin'])): ?>
+                    if(isset($_SESSION['connected']) == true): ?>
                         <a href="/decoTraitement.php">DECONNEXION</a>
                     <?php else: ?>
                         <a href="/login.php">LOGIN</a>
