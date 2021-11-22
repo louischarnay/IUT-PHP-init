@@ -16,7 +16,7 @@ class db {
         $pdo->exec("UPDATE users SET updated=date('now')");
     }
 
-    public function fecthPerson(string $username, string $passwd) {
+    public function fetchPerson(string $username, string $passwd) {
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
         $sth = $pdo->prepare("SELECT * FROM users WHERE email= :email");
         $sth->execute([
@@ -60,6 +60,29 @@ class db {
         else {
             return $result['name'];
         }
+    }
+
+    public function createAccount(string $email, string $name, string $lastname, string $password, string $town, string $postal, string $adress){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT * FROM users WHERE email= :email");
+        $sth->execute([
+            'email' => $email
+        ]);
+        $result = $sth->fetch();
+        if ($result == false){
+            $sth = $pdo->prepare('INSERT INTO users (id, email, name, lastname, password, town, postal, address, active, updated) VALUES (0, email, name, lastname, password, town, postal, address, 1, Date())');
+            $sth->execute([
+                'email' => $email,
+                'name' => $name,
+                'lastname' => $lastname,
+                'password' => $password,
+                'town' => $town,
+                'postal' => $postal,
+                'address' => $adress
+            ]); 
+            return true;
+        }
+        return false;
     }
 }
 ?>
