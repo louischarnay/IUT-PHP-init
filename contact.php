@@ -13,7 +13,7 @@
 <?php include 'modules/header.php'?>
 <main>
     <section id="formContact">
-        <form data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out" action="repForm.php" method="post" enctype="multipart/form-data">
+        <form data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out" action="repFormContact.php" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>CONTACTEZ-MOI</legend>
                 <div id="formulaireContact">

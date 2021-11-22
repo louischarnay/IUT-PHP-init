@@ -1,7 +1,9 @@
 <?php
 session_start();
-if ("admin" == $_POST["username"] && "admin" == $_POST["mdp"]){
-    $_SESSION['admin'] = true;
+include "class/db.php";
+$db1 = new db();
+if ($db1->fecthPerson($_POST["username"], $_POST["mdp"]) == true) {
+    $_SESSION['admin'] = true; 
 }
 
 $_SESSION['username'] = $_POST["username"];
