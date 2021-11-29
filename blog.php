@@ -25,9 +25,11 @@ include 'modules/header.php';
     </p>
     <h2 data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out">ARTICLES RECENTS</h2>
     <ul>
-        <li><a href="/modules/what-is-cryptomining.php"><p class="center">What is cryptomining ?</p></a></li>
-        <li><a href="/modules/minecraft-live-is-back-once-again.php"><p class="center">Minecraft live is back once again</p></a></li>
-        <li><a href="/modules/nintendo-could-add-game-boy-game-boy-color.php"><p class="center">Nintendo could add game boy game boy color</p></a></li>
+        <li><a href="/articles/what-is-cryptomining.php"><p class="center">What is cryptomining ?</p></a></li>
+        <li><a href="/articles/minecraft-live-is-back-once-again.php"><p class="center">Minecraft live is back once again</p></a></li>
+        <li><a href="/articles/nintendo-could-add-game-boy-game-boy-color.php"><p class="center">Nintendo could add game boy game boy color</p></a></li>
+        <li><a href="/articles/nintendo-could-add-game-boy-game-boy-color.php"><p class="center">Nintendo could add game boy game boy color</p></a></li>
+        <li><a href="/articles/nintendo-could-add-game-boy-game-boy-color.php"><p class="center">Nintendo could add game boy game boy color</p></a></li>
     </ul>
 </main>
 <?php include 'modules/footer.php'?>

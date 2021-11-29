@@ -109,5 +109,10 @@ class db {
         }
         return false;
     }
+
+    public function getArticle(int $idArticle){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $count = $pdo->exec('SELECT COUNT * FROM articles');
+        return $count;
+    }
 }
-?>
