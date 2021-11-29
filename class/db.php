@@ -81,10 +81,11 @@ class db {
                     'postal' => $postal,
                     'address' => $adress
                 ]); 
-                return true;
+                return 0;
             }
+            return 1;
         }
-        return false;
+        return 2;
     }
 
     public function addMessage(string $topic, string $emailContact, string $tel, string $name, string $lastname, string $message){

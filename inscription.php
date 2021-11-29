@@ -46,7 +46,7 @@
                     </div>
                     <p id="titrePhoto" class="pLabel">Avatar</p>
                     <label for="photo" id="labelphoto">Choisir une photo</label>
-                    <input type="file" name="photo" id="photo" accept="image/png" required="required">
+                    <input type="file" name="photo" id="photo" accept="image/png">
                     <p class="pLabel">Centres d'intérêts</p>
                     <div id="divLoisirs">
                         <input type="checkbox" name="loisirs[]" id="sport" value="Sport" class="checkBox">
@@ -64,6 +64,17 @@
                     </div>
                     <label id="labelCouleur" for="couleur">Couleur préférée</label>
                     <input type="color" name="couleur" id="couleur">
+                    <div id="divMessageIncorrectContact">
+                        <p id="messageIncorrect">
+                            <?php if(isset($_SESSION["inscriptionFailed"]) == true && $_SESSION["inscriptionFailed"] == "wrongMail") {
+                                echo "Adresse email déjà utilisée";
+                            }elseif(isset($_SESSION["inscriptionFailed"]) == true && $_SESSION["inscriptionFailed"] == "wrongPassword"){
+                                echo "Les mots de passe ne correspondent pas";
+                            }else{
+                            echo "";
+                            }?>
+                        </p>
+                    </div>
                     <div id="divButtonsInscription">
                         <button type="submit" class="envoyerInscription">S'inscrire</button>
                         <button type="reset" class="effacerInscription">Effacer</button>
