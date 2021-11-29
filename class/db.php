@@ -62,7 +62,7 @@ class db {
         }
     }
 
-    public function createAccount(string $email, string $name, string $lastname, string $password, string $town, string $postal, string $adress){
+    public function createAccount(string $email, string $name, string $lastname, string $password, string $password2, string $town, string $postal, string $adress){
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
         $sth = $pdo->prepare("SELECT * FROM users WHERE email= :email");
         $sth->execute([
@@ -70,17 +70,19 @@ class db {
         ]);
         $result = $sth->fetch();
         if ($result == false){
-            $sth = $pdo->prepare('INSERT INTO users (email, name, lastname, password, town, postal, address, active, updated) VALUES (:email, :name, :lastname, :password, :town, :postal, :address, 1, Date())');
-            $sth->execute([
-                'email' => $email,
-                'name' => $name,
-                'lastname' => $lastname,
-                'password' => $password,
-                'town' => $town,
-                'postal' => $postal,
-                'address' => $adress
-            ]); 
-            return true;
+            if ($password == $password2){
+                $sth = $pdo->prepare('INSERT INTO users (email, name, lastname, password, town, postal, address, active, updated) VALUES (:email, :name, :lastname, :password, :town, :postal, :address, 1, Date())');
+                $sth->execute([
+                    'email' => $email,
+                    'name' => $name,
+                    'lastname' => $lastname,
+                    'password' => $password,
+                    'town' => $town,
+                    'postal' => $postal,
+                    'address' => $adress
+                ]); 
+                return true;
+            }
         }
         return false;
     }
