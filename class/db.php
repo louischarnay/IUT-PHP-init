@@ -84,5 +84,27 @@ class db {
         }
         return false;
     }
+
+    public function addMessage(string $topic, string $emailContact, string $tel, string $name, string $lastname, string $message){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+        $sth->execute([
+            'email' => $emailContact
+        ]);
+        $result = $sth->fetch();
+        if($result){
+            $sth = $pdo->prepare('INSERT INTO messages (name, lastname, tel, emailContact, topic, message) VALUES (:name, :lastname, :tel, :emailContact, :topic, :message)');
+            $sth->execute([
+                'name' => $name,
+                'lastname' => $lastname,
+                'tel' => $tel,
+                'emailContact' => $emailContact,
+                'topic' => $topic,
+                'message' => $message
+            ]);
+            return true;
+        }
+        return false;
+    }
 }
 ?>
