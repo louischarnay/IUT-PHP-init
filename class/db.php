@@ -76,7 +76,7 @@ class db {
                     'email' => $email,
                     'name' => $name,
                     'lastname' => $lastname,
-                    'password' => $password,
+                    'password' => password_hash($password, PASSWORD_DEFAULT),
                     'town' => $town,
                     'postal' => $postal,
                     'address' => $adress
