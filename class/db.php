@@ -16,7 +16,7 @@ class db {
         $pdo->exec("UPDATE users SET updated=date('now')");
     }
 
-    public function fetchPerson(string $username, string $passwd) {
+    public function fetchPerson(string $username, string $password) {
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
         $sth = $pdo->prepare("SELECT * FROM users WHERE email= :email");
         $sth->execute([
@@ -26,7 +26,7 @@ class db {
         if ($result == false){
             return false;
         }
-        if ($result['password'] == $passwd){
+        if (password_verify($password, $result['password'])){
             return true;
         }
         return false;
