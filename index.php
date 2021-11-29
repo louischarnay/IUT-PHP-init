@@ -17,6 +17,7 @@ include 'modules/header.php';
 //$db1 = new db();
 //$db1->connection();
 //$db1->dateUpdate();
+//$db1->hashPasswords();
 
 ?>
 <main>
