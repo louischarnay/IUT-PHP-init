@@ -8,7 +8,7 @@
                 <li><a href="/inscription.php">INSCRIPTION</a></li>
                 <li id="blog"><a href="">BLOG</a>
                     <ul id="sousMenu">
-                        <li><a href="" class="menuSelected">BLOG</a></li>
+                        <li><a href="/blog.php" class="menuSelected">BLOG</a></li>
                         <li><a href="/articles/minecraft-live-is-back-once-again.php" class="sousMenuArticle">MINECRAFT</a></li>
                         <li><a href="/articles/what-is-cryptomining.php" class="sousMenuArticle">CRYPTOMINING</a></li>
                         <li><a href="/articles/nintendo-could-add-game-boy-game-boy-color.php" class="sousMenuArticle">NINTENDO</a></li>
