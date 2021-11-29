@@ -11,13 +11,8 @@
 <body>
 <?php
 include "class/db.php";
-include 'modules/banner.php';
+include "modules/banner.php";
 include 'modules/header.php';
-
-//$db1 = new db();
-//$db1->connection();
-//$db1->dateUpdate();
-
 ?>
 <main>
     <h2 data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out">PRESENTATION</h2>
@@ -30,7 +25,7 @@ include 'modules/header.php';
     </p>
     <section id="paragraphesAccueil">
         <div id="fondCouleurAccueil"></div>
-        <div id="paragrapheHTML" data-aos="fade-right" data-aos-duration="1000">
+        <div id="paragrapheHTML" data-aos="fade-up" data-aos-duration="1000">
             <img src="img/logo_html.png" alt="logo HTML" class="imgAccueil" id="imgHTML">
             <h2>HTML</h2>
             <p><abbr title="HyperText Markup Language">HTML</abbr> : <em>Lorem ipsum</em> dolor sit amet, consectetur adipiscing elit. Cras commodo justo pretium dolor lobortis sollicitudin.
@@ -48,7 +43,7 @@ include 'modules/header.php';
                 Aenean mollis ligula nec ultrices imperdiet. Maecenas nec facilisis lectus.
             </p>
         </div>
-            <div id="paragrapheJS" data-aos="fade-left" data-aos-duration="1000">
+            <div id="paragrapheJS" data-aos="fade-up" data-aos-duration="1000">
             <img src="img/logo_js.png" alt="logo JS" class="imgAccueil" id="imgJS">
             <h2>JS</h2>
             <p><abbr title="JavaScript">JS</abbr> : <em>Lorem ipsum</em> dolor sit amet, consectetur adipiscing elit. Cras commodo justo pretium dolor lobortis sollicitudin.
