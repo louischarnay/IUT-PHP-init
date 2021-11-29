@@ -2,7 +2,7 @@
 session_start();
 include "class/db.php";
 $db1 = new db();
-if ($db1->fecthPerson($_POST["username"], $_POST["mdp"]) == true) {
+if ($db1->fetchPerson($_POST["username"], $_POST["mdp"]) == true) {
     $_SESSION['connected'] = true;
     $_SESSION["mdpIncorrect"] = false;
     $_SESSION['nom'] = $db1->getNom($_POST["username"]);

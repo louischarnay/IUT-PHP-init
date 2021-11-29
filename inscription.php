@@ -13,7 +13,7 @@
 <?php include 'modules/header.php'?>
 <main>
     <section id="formInscription">
-        <form data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out" action="repFormInscription.php" method="post" enctype="multipart/form-data">
+        <form data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out" action="inscriptionTraitement.php" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>INSCRIPTION</legend>
                 <div id="formulaireInscription">
