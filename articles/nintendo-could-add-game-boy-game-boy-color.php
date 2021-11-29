@@ -16,7 +16,7 @@
         <article>
             <section class="title-group">
                 <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-out">NINTENDO COULD ADD GAME BOY, GAME BOY COLOR TITLES<br> TO SWITCH ONLINE SERVICE 'REALLY SOON'</h1>
-                <h2 data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out">Adding even more value to Nintendo Switch&nbsp;Online</h2>
+                <h2 data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out">Adding even more value to Nintendo Switch Online</h2>
                 <div id="auteur">
                     <em>
                         By <a href="#" >Shawn Knight</a>

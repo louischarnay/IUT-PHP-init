@@ -916,6 +916,23 @@ input#ville:focus~#labelVille{
     grid-row: 27;
 }
 
+#formAjout{
+    width: 90%;
+    margin: 5vw 5% 0 5%;
+}
+
+#formulaireAjout{
+    display: grid;
+    grid-template-rows: 3rem 3rem 3rem 5rem 3rem 10rem 3rem 3.5rem;
+    grid-template-columns: 5% 90% 5%;
+    width: 100%;
+    align-items: end;
+}
+
+.inFormAjout{
+    grid-column: 2;
+}
+
 @media (max-width: 575px) {
 
     footer p, footer a, nav ul li a, .pBlog{
