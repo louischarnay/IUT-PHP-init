@@ -1,6 +1,6 @@
 :root{
     --couleurNoir: #000000;
-    --couleurOrange: #E55126;
+    --couleurOrange: #e55126;
     --couleurBlanc: #eae3e1;
     --couleurGris: #383838;
     --couleurNoirTransparent: rgba(0, 0, 0, 0.6);
@@ -8,21 +8,21 @@
 
 .orange{
     --couleurNoir: #000000;
-    --couleurOrange: #E55126;
+    --couleurOrange: #e55126;
     --couleurBlanc: #eae3e1;
     --couleurGris: #383838;
 }
 
 .jaune{
     --couleurNoir: #383838;
-    --couleurOrange: #F1BF26;
+    --couleurOrange: #e5a228;
     --couleurBlanc: #eae3e1;
     --couleurGris: #000000;
 }
 
 .bleu{
     --couleurNoir: #383838;
-    --couleurOrange: #30A9DC;
+    --couleurOrange: #0c73b8;
     --couleurBlanc: #00000;
     --couleurGris: #eae3e1;
 }
