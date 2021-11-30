@@ -110,6 +110,12 @@ class db {
         return false;
     }
 
+    public function addArticle(string $titre, string $description, string $contenu, string $imagePath, string $shortTitle){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db');
+        $sth = $pdo->prepare("INSERT INTO articles (titre, description, contenu, imagePath, shortTitle) VALUES (:titre, :description, :contenu, :imagePath, :shortTitle)");
+        $sth->execute(['titre'=>$titre, 'description'=>$description, 'contenu'=>$contenu, 'imagePath'=>$imagePath, 'shortTitle'=>$shortTitle]);
+    }
+
     public function getTitreArticle(int $index){
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
         $sth = $pdo->prepare("SELECT titre FROM articles WHERE id = :index");
