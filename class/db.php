@@ -141,4 +141,12 @@ class db {
         $result = $sth->fetch();
         return $result['imagePath'];
     }
+
+    public function getSizeDBArticles(){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db');
+        $sth = $pdo->prepare("SELECT COUNT(*) FROM articles");
+        $sth->execute();
+        $result = $sth->fetch();
+        return $result['COUNT(*)'];
+    }
 }

@@ -25,12 +25,27 @@ include 'modules/header.php';
             Maecenas ac est suscipit odio sodales luctus eu ut velit. Nam convallis blandit sollicitudin. Duis blandit erat at.
         </p>
         <h2 data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out">ARTICLES RECENTS</h2>
+        <?php
+            $db = new db();
+            $nbArticles = $db->getSizeDBArticles();
+            echo $nbArticles;
+        ?>
         <ul>
-            <li><a href="blog.php?article=1"><p class="center">What is cryptomining ?</p></a></li>
-            <li><a href="blog.php?article=2"><p class="center">Minecraft live is back once again</p></a></li>
-            <li><a href="blog.php?article=3"><p class="center">Nintendo could add game boy game boy color</p></a></li>
-            <li><a href="blog.php?article=4"><p class="center">Nintendo could add game boy game boy color</p></a></li>
-            <li><a href="blog.php?article=5"><p class="center">Nintendo could add game boy game boy color</p></a></li>
+            <?php if($nbArticles > 0):?>
+            <li><a href="blog.php?article=<?php echo $nbArticles ?>"><p class="center"><?php echo $db->getTitreArticle($nbArticles) ?></p></a></li>
+            <?php endif?>
+            <?php if($nbArticles > 1):?>
+            <li><a href="blog.php?article=<?php echo $nbArticles-1 ?>"><p class="center"><?php echo $db->getTitreArticle($nbArticles-1) ?></p></a></li>
+            <?php endif?>
+            <?php if($nbArticles > 2):?>
+            <li><a href="blog.php?article=<?php echo $nbArticles-2 ?>"><p class="center"><?php echo $db->getTitreArticle($nbArticles-2) ?></p></a></li>
+            <?php endif?>
+            <?php if($nbArticles > 3):?>
+            <li><a href="blog.php?article=<?php echo $nbArticles-3 ?>"><p class="center"><?php echo $db->getTitreArticle($nbArticles-3) ?></p></a></li>
+            <?php endif?>
+            <?php if($nbArticles > 4):?>
+            <li><a href="blog.php?article=<?php echo $nbArticles-4 ?>"><p class="center"><?php echo $db->getTitreArticle($nbArticles-4) ?></p></a></li>
+            <?php endif?>
         </ul>
     </main>
 <?php else:?>
@@ -39,7 +54,7 @@ include 'modules/header.php';
             <section class="title-group">
                 <h1 data-aos="fade-down" data-aos-duration="1000" data-aos-easing="ease-out">
                     <?php
-                        $db = new db();
+                    $db = new db();
                         echo $db->getTitreArticle($_GET["article"]);
                     ?>
                 </h1>
