@@ -6,7 +6,11 @@
     </div>
     <div id="footerA">
         <a href="contact.php">Contact</a>
-        <a href="#art1">Présentation</a>
-        <a href="#art3">Article récent</a>
+        <a href="index.php">Présentation</a>
+        <?php
+        $db = new db();
+        $nbArticles = $db->getSizeDBArticles();
+        ?>
+        <a href="blog.php?article=<?php echo $nbArticles ?>" class="sousMenuArticle">Article récent</a>
     </div>
 </footer>
