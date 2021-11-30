@@ -9,8 +9,11 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-<?php include 'modules/banner.php'?>
-<?php include 'modules/header.php'?>
+<?php
+    include "class/db.php";
+    include "modules/banner.php";
+    include 'modules/header.php';
+?>
 <main>
     <section id="formContact">
         <form data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out" action="contactTraitement.php" method="post" enctype="multipart/form-data">

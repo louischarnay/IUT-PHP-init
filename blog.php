@@ -10,9 +10,9 @@
 </head>
 <body>
 <?php
-include "class/db.php";
-include "modules/banner.php";
-include 'modules/header.php';
+    include "class/db.php";
+    include "modules/banner.php";
+    include 'modules/header.php';
 ?>
 <?php if(!isset($_GET["article"])):?>
     <main>

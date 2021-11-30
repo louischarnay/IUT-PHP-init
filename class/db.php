@@ -142,6 +142,14 @@ class db {
         return $result['imagePath'];
     }
 
+    public function getShortTitleArticle(int $index){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT shortTitle FROM articles WHERE id = :index");
+        $sth->execute(["index" => $index]);
+        $result = $sth->fetch();
+        return $result['shortTitle'];
+    }
+
     public function getSizeDBArticles(){
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db');
         $sth = $pdo->prepare("SELECT COUNT(*) FROM articles");
