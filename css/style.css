@@ -923,7 +923,7 @@ input#ville:focus~#labelVille{
 
 #formulaireAjout{
     display: grid;
-    grid-template-rows: 3rem 3rem 3rem 5rem 3rem 10rem 3rem 3.5rem;
+    grid-template-rows: 3rem 3rem 3rem 3rem 3rem 5rem 3rem 10rem 3rem 3.5rem;
     grid-template-columns: 5% 90% 5%;
     width: 100%;
     align-items: end;
