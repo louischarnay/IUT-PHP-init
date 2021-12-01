@@ -92,6 +92,21 @@ class form {
                     ?><textarea name="message" id="message" rows="10" cols="50" maxlength="300" required="required"></textarea>
                     <label class="labelContact" id="labelMessage" for="message">Votre message</label><?php
                     break;
+                case "login":
+                    ?><input type="text" name="username" id="usernameEnregistrer" required="required" value=<?php echo $_COOKIE["usernameEnregistre"]??"" ?>>
+                    <label for="usernameEnregistrer" id="labelEmail2">Login</label>
+                    <input type="password" name="mdp" id="mdpEnregeistrer" required="required" value=<?php echo $_COOKIE["mdpEnregistre"]??""?>>
+                    <label for="mdpEnregeistrer" id="labelMdp">Mot de passe</label>
+                    <div id="divMessageIncorrect">
+                        <p id="messageIncorrect">
+                            <?php if(isset($_SESSION["mdpIncorrect"]) == true) {
+                                echo "Adresse email ou mot de passe incorrect";
+                            }?>
+                        </p>
+                    </div>
+                    <input type="checkbox" name="enregistrer" id="enregistrer" value="Enregistrer" class="checkBox">
+                    <label id="labelEnregistrer" for="enregistrer" class="labelLoisir">S'enregistrer</label><?php
+                    break;
             }
     }
 }

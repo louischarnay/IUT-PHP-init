@@ -11,6 +11,7 @@
 <body>
 <?php
     include "class/db.php";
+    include "class/form.php";
     include "modules/banner.php";
     include 'modules/header.php';
 ?>
@@ -20,19 +21,12 @@
             <fieldset>
                 <legend>CONNEXION</legend>
                 <div id="formulaireConnexion">
-                    <input type="text" name="username" id="usernameEnregistrer" required="required" value=<?php echo $_COOKIE["usernameEnregistre"]??"" ?>>
-                    <label for="usernameEnregistrer" id="labelEmail2">Login</label>
-                    <input type="password" name="mdp" id="mdpEnregeistrer" required="required" value=<?php echo $_COOKIE["mdpEnregistre"]??""?>>
-                    <label for="mdpEnregeistrer" id="labelMdp">Mot de passe</label>
-                    <div id="divMessageIncorrect">
-                        <p id="messageIncorrect">
-                            <?php if(isset($_SESSION["mdpIncorrect"]) == true) {
-                                echo "Adresse email ou mot de passe incorrect";
-                            }?>
-                        </p>
-                    </div>
-                    <input type="checkbox" name="enregistrer" id="enregistrer" value="Enregistrer" class="checkBox">
-                    <label id="labelEnregistrer" for="enregistrer" class="labelLoisir">S'enregistrer</label>
+                    <?php
+                        $list = array('login');
+                        $f1 = new form();
+                        $f1->setList($list);
+                        $f1->input();
+                    ?>
                     <div id="divButtonsInscription">
                         <button type="submit" class="envoyerInscription">Se connecter</button>
                         <button type="reset" class="effacerInscription">Effacer</button>

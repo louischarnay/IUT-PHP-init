@@ -21,18 +21,12 @@
             <fieldset>
                 <legend>CONTACTEZ-MOI</legend>
                 <div id="formulaireContact">
-                    <input class="inputContact" type="text" name="sujet" id="sujet" required="required">
-                    <label class="labelContact" id="labelSujet" for="sujet">Sujet</label>
-                    <input class="inputContact" type="email" name="mail" id="mail" required="required">
-                    <label class="labelContact" id="labelEmail" for="mail">Email</label>
-                    <input class="inputContact" type="tel" name="tel" id="tel" required="required">
-                    <label class="labelContact" id="labelTel" for="tel">Téléphone</label>
-                    <input class="inputContact" type="text" name="nom" id="nom" required="required">
-                    <label class="labelContact" id="labelNom" for="nom">Nom</label>
-                    <input class="inputContact"     type="text" name="prenom" id="prenom" required="required">
-                    <label class="labelContact" id="labelPrenom" for="prenom">Prénom</label>
-                    <textarea name="message" id="message" rows="10" cols="50" maxlength="300" required="required"></textarea>
-                    <label class="labelContact" id="labelMessage" for="message">Votre message</label>
+                    <?php
+                        $list = array('sujet', 'email', 'tel', 'nom', 'prenom', 'message');
+                        $f1 = new form();
+                        $f1->setList($list);
+                        $f1->input();
+                    ?>
                     <div id="divButtons">
                         <button class="envoyerContact" type="submit">Envoyer</button>
                         <button class="effacerContact" type="reset">Effacer</button>
