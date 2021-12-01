@@ -11,6 +11,7 @@
 <body>
 <?php
     include "class/db.php";
+    include "class/form.php";
     include "modules/banner.php";
     include 'modules/header.php';
 ?>
