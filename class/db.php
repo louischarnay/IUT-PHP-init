@@ -110,6 +110,59 @@ class db {
         return false;
     }
 
+    public function addArticle(string $titre, string $description, string $contenu, string $imagePath, string $shortTitle){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db');
+        $sth = $pdo->prepare("INSERT INTO articles (titre, description, contenu, imagePath, shortTitle) VALUES (:titre, :description, :contenu, :imagePath, :shortTitle)");
+        $sth->execute(['titre'=>$titre, 'description'=>$description, 'contenu'=>$contenu, 'imagePath'=>$imagePath, 'shortTitle'=>$shortTitle]);
+    }
+
+    public function getTitreArticle(int $index){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT titre FROM articles WHERE id = :index");
+        $sth->execute(["index" => $index]);
+        $result = $sth->fetch();
+        return $result['titre'];
+    }
+
+    public function getDescriptionArticle(int $index){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT description FROM articles WHERE id = :index");
+        $sth->execute(["index" => $index]);
+        $result = $sth->fetch();
+        return $result['description'];
+    }
+
+    public function getContenuArticle(int $index){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT contenu FROM articles WHERE id = :index");
+        $sth->execute(["index" => $index]);
+        $result = $sth->fetch();
+        return $result['contenu'];
+    }
+
+    public function getImageArticle(int $index){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT imagePath FROM articles WHERE id = :index");
+        $sth->execute(["index" => $index]);
+        $result = $sth->fetch();
+        return $result['imagePath'];
+    }
+
+    public function getShortTitleArticle(int $index){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT shortTitle FROM articles WHERE id = :index");
+        $sth->execute(["index" => $index]);
+        $result = $sth->fetch();
+        return $result['shortTitle'];
+    }
+
+    public function getSizeDBArticles(){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db');
+        $sth = $pdo->prepare("SELECT COUNT(*) FROM articles");
+        $sth->execute();
+        $result = $sth->fetch();
+        return $result['COUNT(*)'];
+    }
     public function hashPasswords(){
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
         $sth = $pdo->prepare("SELECT * FROM users");
@@ -124,4 +177,3 @@ class db {
         }
     }
 }
-?>

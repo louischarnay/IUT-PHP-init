@@ -1,6 +1,6 @@
 :root{
     --couleurNoir: #000000;
-    --couleurOrange: #E55126;
+    --couleurOrange: #e55126;
     --couleurBlanc: #eae3e1;
     --couleurGris: #383838;
     --couleurNoirTransparent: rgba(0, 0, 0, 0.6);
@@ -8,21 +8,21 @@
 
 .orange{
     --couleurNoir: #000000;
-    --couleurOrange: #E55126;
+    --couleurOrange: #e55126;
     --couleurBlanc: #eae3e1;
     --couleurGris: #383838;
 }
 
 .jaune{
     --couleurNoir: #383838;
-    --couleurOrange: #F1BF26;
+    --couleurOrange: #e5a228;
     --couleurBlanc: #eae3e1;
     --couleurGris: #000000;
 }
 
 .bleu{
     --couleurNoir: #383838;
-    --couleurOrange: #30A9DC;
+    --couleurOrange: #0c73b8;
     --couleurBlanc: #00000;
     --couleurGris: #eae3e1;
 }
@@ -914,6 +914,23 @@ input#ville:focus~#labelVille{
 
 #divMessageIncorrectContact{
     grid-row: 27;
+}
+
+#formAjout{
+    width: 90%;
+    margin: 5vw 5% 0 5%;
+}
+
+#formulaireAjout{
+    display: grid;
+    grid-template-rows: 3rem 3rem 3rem 3rem 3rem 5rem 3rem 10rem 3rem 3.5rem;
+    grid-template-columns: 5% 90% 5%;
+    width: 100%;
+    align-items: end;
+}
+
+.inFormAjout{
+    grid-column: 2;
 }
 
 @media (max-width: 575px) {

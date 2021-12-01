@@ -10,15 +10,14 @@
 </head>
 <body>
 <?php
-include "class/db.php";
-include 'modules/banner.php';
-include 'modules/header.php';
+    include "class/db.php";
+    include "modules/banner.php";
+    include 'modules/header.php';
 
 //$db1 = new db();
 //$db1->connection();
 //$db1->dateUpdate();
 //$db1->hashPasswords();
-
 ?>
 <main>
     <h2 data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out">PRESENTATION</h2>
