@@ -32,11 +32,41 @@ class db {
         return false;
     }
 
-    public function getNom(string $username){
+    public function getId(string $email){
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
         $sth = $pdo->prepare("SELECT * FROM users WHERE email= :email");
         $sth->execute([
-            'email' => $username
+            'email' => $email
+        ]);
+        $result = $sth->fetch();
+        if ($result == false){
+            return null;
+        }
+        else {
+            return $result['id'];
+        }
+    }
+
+    public function getEmail(string $id){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT * FROM users WHERE id= :id");
+        $sth->execute([
+            'id' => $id
+        ]);
+        $result = $sth->fetch();
+        if ($result == false){
+            return null;
+        }
+        else {
+            return $result['email'];
+        }
+    }
+
+    public function getNom(string $id){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT * FROM users WHERE id= :id");
+        $sth->execute([
+            'id' => $id
         ]);
         $result = $sth->fetch();
         if ($result == false){
@@ -47,11 +77,11 @@ class db {
         }
     }
 
-    public function getPrenom(string $username){
+    public function getPrenom(string $id){
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
-        $sth = $pdo->prepare("SELECT * FROM users WHERE email= :email");
+        $sth = $pdo->prepare("SELECT * FROM users WHERE id= :id");
         $sth->execute([
-            'email' => $username
+            'id' => $id
         ]);
         $result = $sth->fetch();
         if ($result == false){
@@ -59,6 +89,51 @@ class db {
         }
         else {
             return $result['name'];
+        }
+    }
+
+    public function getTown(string $id){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT * FROM users WHERE id= :id");
+        $sth->execute([
+            'id' => $id
+        ]);
+        $result = $sth->fetch();
+        if ($result == false){
+            return null;
+        }
+        else {
+            return $result['town'];
+        }
+    }
+
+    public function getPostal(string $id){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT * FROM users WHERE id= :id");
+        $sth->execute([
+            'id' => $id
+        ]);
+        $result = $sth->fetch();
+        if ($result == false){
+            return null;
+        }
+        else {
+            return $result['postal'];
+        }
+    }
+
+    public function getAdress(string $id){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT * FROM users WHERE id= :id");
+        $sth->execute([
+            'id' => $id
+        ]);
+        $result = $sth->fetch();
+        if ($result == false){
+            return null;
+        }
+        else {
+            return $result['adress'];
         }
     }
 
@@ -164,7 +239,7 @@ class db {
         $sth = $pdo->prepare("SELECT * FROM articles ORDER BY id DESC LIMIT 1");
         return $sth->fetch();
     }
-
+    
     public function hashPasswords(){
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
         $sth = $pdo->prepare("SELECT * FROM users");
