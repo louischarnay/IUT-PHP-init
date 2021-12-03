@@ -19,7 +19,7 @@ class db {
         $this->pdo->exec("UPDATE users SET updated=date('now')");
     }
 
-    public function hashPasswords(){$
+    public function hashPasswords(){
         $sth = $this->pdo->prepare("SELECT * FROM users");
         $sth->execute();
         $result = $sth->fetchAll();

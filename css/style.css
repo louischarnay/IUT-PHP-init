@@ -517,6 +517,10 @@ input.checkBox:checked + label{
     background-color: var(--couleurBlanc);
 }
 
+.active{
+    color: var(--couleurOrange);
+}
+
 label.labelLoisir{
     color: var(--couleurOrange);
     width: 30%;
