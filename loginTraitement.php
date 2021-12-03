@@ -2,9 +2,9 @@
 session_start();
 include "class/db.php";
 $db1 = new db();
-if ($db1->fetchPerson($_POST["username"], $_POST["mdp"]) == true) {
+if ($db1->fetchPerson($_POST["usernameEnregistrer"], $_POST["mdpEnregistrer"]) == true) {
     $_SESSION["mdpIncorrect"] = false;
-    $_SESSION["id"] = $db1->getId($_POST["username"]);
+    $_SESSION["id"] = $db1->getId($_POST["usernameEnregistrer"]);
     header("Location: ../index.php");
 }
 else {
@@ -12,8 +12,8 @@ else {
     header("Location: ../login.php");
 }
 if(isset($_POST["enregistrer"])){
-    setcookie("usernameEnregistre", $_POST["username"], time() + 8400, '/');
-    setcookie("mdpEnregistre", $_POST["mdp"], time() + 8400, '/');
+    setcookie("usernameEnregistre", $_POST["usernameEnregistrer"], time() + 8400, '/');
+    setcookie("mdpEnregistre", $_POST["mdpEnregistrer"], time() + 8400, '/');
 }
 else{
     setcookie("usernameEnregistre", "", time() - 3600, '/');

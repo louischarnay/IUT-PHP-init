@@ -22,11 +22,15 @@
                 <legend>CONTACTEZ-MOI</legend>
                 <div id="formulaireContact">
                     <?php
-                        $list = array('sujet', 'email', 'tel', 'nom', 'prenom', 'message');
                         $f1 = new form();
-                        $f1->setList($list);
-                        $f1->input();
+                        echo $f1->input('text', ['sujet', 'labelSujet', 'Sujet', true]);
+                        echo $f1->input('email', ['email', 'labelEmail', 'Email', true]);
+                        echo $f1->input('tel', ['tel', 'labelTel', 'Téléphone', true]);
+                        echo $f1->input('text', ['nom', 'labelNom', 'Nom', true]);
+                        echo $f1->input('text', ['prenom', 'labelPrenom', 'Prenom', true]);
                     ?>
+                    <label class="labelContact" id="labelMessage" for="message">Votre message</label>
+                    <textarea name="message" id="message" rows="10" cols="50" maxlength="300" required="required"></textarea>
                     <div class="divButtons">
                         <button class="envoyerContact" type="submit">Envoyer</button>
                         <button class="effacerContact" type="reset">Effacer</button>

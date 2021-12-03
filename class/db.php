@@ -149,7 +149,7 @@ class db {
         else {
             return $result['address'];
         }
-    }
+    }   
 
     public function createAccount(string $email, string $name, string $lastname, string $password, string $password2, string $town, string $postal, string $adress){
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );

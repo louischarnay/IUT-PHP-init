@@ -22,11 +22,18 @@
                 <legend>CONNEXION</legend>
                 <div id="formulaireConnexion">
                     <?php
-                        $list = array('login');
                         $f1 = new form();
-                        $f1->setList($list);
-                        $f1->input();
+                        echo $f1->input('email', ['usernameEnregistrer', 'labelEmail2', 'Login', true]);
+                        echo $f1->input('password', ['mdpEnregistrer', 'labelMdp', 'Mot de passe', true]);
                     ?>
+                    <div id="divMessageIncorrect">
+                        <p id="messageIncorrect">
+                            <?php if(isset($_SESSION["mdpIncorrect"]) == true) {
+                                echo "Adresse email ou mot de passe incorrect";
+                            }?>
+                        </p>
+                    </div>
+                    <?php echo $f1->input('checkbox', ['enregistrer', 'enregistrer', 'labelEnregistrer', 'labelLoisir', 'S\'enregistrer', 'checkBox'])?>
                     <div class="divButtons">
                         <button type="submit" class="envoyerInscription">Se connecter</button>
                         <button type="reset" class="effacerInscription">Effacer</button>
