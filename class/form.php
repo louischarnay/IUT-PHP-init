@@ -10,38 +10,53 @@ class form {
         foreach($this->methods as $item)    
             switch($item){
                 case "email":
-                    ?><input type="email" name="email" id="email" required="required">
-                    <label for="email" id="labelEmail2">Email</label><?php
+                    ?>
+                    <label for="email" id="labelEmail">Email</label>
+                    <input type="email" name="email" id="email" required="required">
+                    <?php
                     break;
                 case "password":
-                    ?><input type="password" name="mdp" id="mdp" required="required">
-                    <label for="mdp" id="labelMdp">Mot de passe</label>
+                    ?>
+                    <label for="mdp" id="labelMdp">Mot de passe</label><input type="password" name="mdp" id="mdp" required="required">
+                    <label for="mdp2" id="labelMdp2">Réécrivez votre mot de passe</label>
                     <input type="password" name="mdp2" id="mdp2" required="required">
-                    <label for="mdp2" id="labelMdp2">Réécrivez votre mot de passe</label><?php
+                    <?php
                     break;
                 case "nom":
-                    ?><input type="text" name="nom" id="nom" required="required">
-                    <label for="nom" id="labelNom2">Nom</label><?php
+                    ?>
+                    <label for="nom" id="labelNom2">Nom</label>
+                    <input type="text" name="nom" id="nom" required="required">
+                    <?php
                     break;
                 case "prenom":
-                    ?><input type="text" name="prenom" id="prenom" required="required">
-                    <label for="prenom" id="labelPrenom2">Prénom</label><?php
+                    ?>
+                    <label for="prenom" id="labelPrenom2">Prénom</label>
+                    <input type="text" name="prenom" id="prenom" required="required">
+                    <?php
                     break;
                 case "date_naissance":
-                    ?><input type="date" name="date_naissance" id="date_naissance" required="required">
-                    <label for="date_naissance" id="labelNaissance">Date de naissance</label><?php
+                    ?>
+                    <label for="date_naissance" id="labelNaissance">Date de naissance</label>
+                    <input type="date" name="date_naissance" id="date_naissance" required="required">
+                    <?php
                     break;
                 case "adresse":
-                    ?><input type="text" name="adresse" id="adresse" required="required">
-                    <label for="adresse" id="labelAdresse">Adresse</label><?php
+                    ?>
+                    <label for="adresse" id="labelAdresse">Adresse</label>
+                    <input type="text" name="adresse" id="adresse" required="required">
+                    <?php
                     break;
                 case "code_postal":
-                    ?><input type="text" name="code_postal" id="code_postal" pattern="[0-9]{5}" required="required">
-                    <label for="code_postal" id="labelCodePostal">Code postal</label><?php
+                    ?>
+                    <label for="code_postal" id="labelCodePostal">Code postal</label>
+                    <input type="text" name="code_postal" id="code_postal" pattern="[0-9]{5}" required="required">
+                    <?php
                     break;
                 case "ville":
-                    ?><input type="text" name="ville" id="ville" required="required">
-                    <label for="ville" id="labelVille">Ville</label><?php
+                    ?>
+                    <label for="ville" id="labelVille">Ville</label>
+                    <input type="text" name="ville" id="ville" required="required">
+                    <?php
                     break;
                 case "sexe":
                     ?><p class="pLabel">Sexe</p>
@@ -81,22 +96,28 @@ class form {
                     <input type="color" name="couleur" id="couleur"><?php
                     break;
                 case "sujet":
-                    ?><input class="inputContact" type="text" name="sujet" id="sujet" required="required">
-                    <label class="labelContact" id="labelSujet" for="sujet">Sujet</label><?php
+                    ?>
+                    <label class="labelContact" id="labelSujet" for="sujet">Sujet</label>
+                    <input class="inputContact" type="text" name="sujet" id="sujet" required="required">
+                    <?php
                     break;
                 case "tel":
-                    ?><input class="inputContact" type="tel" name="tel" id="tel" required="required">
-                    <label class="labelContact" id="labelTel" for="tel">Téléphone</label><?php
+                    ?>
+                    <label class="labelContact" id="labelTel" for="tel">Téléphone</label>
+                    <input class="inputContact" type="tel" name="tel" id="tel" required="required">
+                    <?php
                     break;
                 case "message":
-                    ?><textarea name="message" id="message" rows="10" cols="50" maxlength="300" required="required"></textarea>
-                    <label class="labelContact" id="labelMessage" for="message">Votre message</label><?php
+                    ?>
+                    <label class="labelContact" id="labelMessage" for="message">Votre message</label>
+                    <textarea name="message" id="message" rows="10" cols="50" maxlength="300" required="required"></textarea>
+                    <?php
                     break;
                 case "login":
-                    ?><input type="text" name="username" id="usernameEnregistrer" required="required" value=<?php echo $_COOKIE["usernameEnregistre"]??"" ?>>
-                    <label for="usernameEnregistrer" id="labelEmail2">Login</label>
-                    <input type="password" name="mdp" id="mdpEnregeistrer" required="required" value=<?php echo $_COOKIE["mdpEnregistre"]??""?>>
+                    ?><label for="usernameEnregistrer" id="labelEmail2">Login</label>
+                    <input type="text" name="username" id="usernameEnregistrer" required="required" value=<?php echo $_COOKIE["usernameEnregistre"]??"" ?>>
                     <label for="mdpEnregeistrer" id="labelMdp">Mot de passe</label>
+                    <input type="password" name="mdp" id="mdpEnregeistrer" required="required" value=<?php echo $_COOKIE["mdpEnregistre"]??""?>>
                     <div id="divMessageIncorrect">
                         <p id="messageIncorrect">
                             <?php if(isset($_SESSION["mdpIncorrect"]) == true) {

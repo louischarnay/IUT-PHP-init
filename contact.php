@@ -27,7 +27,7 @@
                         $f1->setList($list);
                         $f1->input();
                     ?>
-                    <div id="divButtons">
+                    <div class="divButtons">
                         <button class="envoyerContact" type="submit">Envoyer</button>
                         <button class="effacerContact" type="reset">Effacer</button>
                     </div>

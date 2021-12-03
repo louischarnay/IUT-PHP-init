@@ -353,7 +353,7 @@ legend{
 #formulaireInscription{
     display: grid;
     grid-template-columns: 5% 30% 30% 30% 5%;
-    grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 7rem 3rem 3rem 3rem 6rem;
+    grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 7rem 3rem 3rem 9rem;
     align-items: end;
     width: 100%;
     height: 100%;
@@ -362,7 +362,7 @@ legend{
 #formulaireConnexion{
      display: grid;
      grid-template-columns: 5% 30% 30% 30% 5%;
-     grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem;
+     grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 9rem;
      align-items: end;
      width: 100%;
      height: 100%;
@@ -370,7 +370,7 @@ legend{
 
 #formulaireContact{
     display: grid;
-    grid-template-columns: 5% 90% 5%;
+    grid-template-columns: 5% 90% 0% 0% 5%;
     grid-template-rows: 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 3rem 10rem 9rem;
     text-align: center;
     width: 100%;
@@ -495,15 +495,7 @@ button{
     margin: 2vw 0;
 }
 
-#divButtons{
-    grid-column: 2;
-    grid-row: 13;
-    display: flex;
-    justify-content: space-between;
-}
-
-#divButtonsInscription{
-    grid-row: 28;
+.divButtons{
     grid-column: 2/5;
     display: flex;
     justify-content: space-between;
@@ -767,66 +759,6 @@ input#prenom:focus~#labelPrenom{
 
 textarea#message:focus~#labelMessage{
     transform: translateX(-25.3vw);
-}
-
-#labelSujet{
-    grid-row: 1;
-}
-
-#labelEmail{
-    grid-row: 3;
-}
-
-#labelTel{
-    grid-row: 5;
-}
-
-#labelNom{
-    grid-row: 7;
-}
-
-#labelPrenom{
-    grid-row: 9;
-}
-
-#labelMessage{
-    grid-row: 11;
-}
-
-#labelEmail2{
-    grid-row: 1;
-}
-
-#labelMdp{
-    grid-row: 3;
-}
-
-#labelMdp2{
-    grid-row: 5;
-}
-
-#labelNom2{
-    grid-row: 7;
-}
-
-#labelPrenom2{
-    grid-row: 9;
-}
-
-#labelNaissance{
-    grid-row: 11;
-}
-
-#labelAdresse{
-    grid-row: 13;
-}
-
-#labelCodePostal{
-    grid-row: 15;
-}
-
-#labelVille{
-    grid-row: 17;
 }
 
 input#email:focus~#labelEmail2{
