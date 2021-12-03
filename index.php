@@ -10,9 +10,9 @@
 </head>
 <body>
 <?php
-    include "class/db.php";
-    include "modules/banner.php";
-    include 'modules/header.php';
+    include_once "class/db.php";
+    include_once "modules/banner.php";
+    include_once 'modules/header.php';
 
 //$db1 = new db();
 //$db1->connection();
