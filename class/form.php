@@ -1,18 +1,30 @@
 <?php
+include_once "class/db.php";
+
 class form {
     private $methods;
+    private $db1;
 
     public function setList($args){
         $this->methods = $args;
     }
 
     public function input(){
+        $db1 = new db();
         foreach($this->methods as $item)    
             switch($item){
                 case "email":
                     ?>
                     <label for="email" id="labelEmail">Email</label>
-                    <input type="email" name="email" id="email" required="required">
+                    <input type="email" name="email" id="email" required="required" value=
+                    <?php
+                        if(isset($_SESSION['id'])){
+                            echo $db1->getEmail((string) $_SESSION['id']);
+                        }
+                        else {
+                            echo "";
+                        }
+                    ?>>
                     <?php
                     break;
                 case "password":
@@ -25,13 +37,29 @@ class form {
                 case "nom":
                     ?>
                     <label for="nom" id="labelNom2">Nom</label>
-                    <input type="text" name="nom" id="nom" required="required">
+                    <input type="text" name="nom" id="nom" required="required" value=
+                    <?php
+                        if(isset($_SESSION['id'])){
+                            echo $db1->getNom((string) $_SESSION['id']);
+                        }
+                        else {
+                            echo "";
+                        }
+                    ?>>
                     <?php
                     break;
                 case "prenom":
                     ?>
                     <label for="prenom" id="labelPrenom2">Prénom</label>
-                    <input type="text" name="prenom" id="prenom" required="required">
+                    <input type="text" name="prenom" id="prenom" required="required" value=
+                    <?php
+                        if(isset($_SESSION['id'])){
+                            echo $db1->getPrenom((string) $_SESSION['id']);
+                        }
+                        else {
+                            echo "";
+                        }
+                    ?>>
                     <?php
                     break;
                 case "date_naissance":
@@ -43,19 +71,43 @@ class form {
                 case "adresse":
                     ?>
                     <label for="adresse" id="labelAdresse">Adresse</label>
-                    <input type="text" name="adresse" id="adresse" required="required">
+                    <input type="text" name="adresse" id="adresse" required="required" value=
+                    <?php
+                        if(isset($_SESSION['id'])){
+                            echo $db1->getAddress((string) $_SESSION['id']);
+                        }
+                        else {
+                            echo "";
+                        }
+                    ?>>
                     <?php
                     break;
                 case "code_postal":
                     ?>
                     <label for="code_postal" id="labelCodePostal">Code postal</label>
-                    <input type="text" name="code_postal" id="code_postal" pattern="[0-9]{5}" required="required">
+                    <input type="text" name="code_postal" id="code_postal" pattern="[0-9]{5}" required="required" value=
+                    <?php
+                        if(isset($_SESSION['id'])){
+                            echo $db1->getPostal((string) $_SESSION['id']);
+                        }
+                        else {
+                            echo "";
+                        }
+                    ?>>
                     <?php
                     break;
                 case "ville":
                     ?>
                     <label for="ville" id="labelVille">Ville</label>
-                    <input type="text" name="ville" id="ville" required="required">
+                    <input type="text" name="ville" id="ville" required="required" value=
+                    <?php
+                        if(isset($_SESSION['id'])){
+                            echo $db1->getTown((string) $_SESSION['id']);
+                        }
+                        else {
+                            echo "";
+                        }
+                    ?>>
                     <?php
                     break;
                 case "sexe":

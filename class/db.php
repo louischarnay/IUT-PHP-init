@@ -136,7 +136,7 @@ class db {
         }
     }
 
-    public function getAdress(string $id){
+    public function getAddress(string $id){
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
         $sth = $pdo->prepare("SELECT * FROM users WHERE id= :id");
         $sth->execute([
@@ -147,7 +147,7 @@ class db {
             return null;
         }
         else {
-            return $result['adress'];
+            return $result['address'];
         }
     }
 
