@@ -9,8 +9,8 @@
         <a href="index.php">Présentation</a>
         <?php
         $db = new db();
-        $nbArticles = $db->getSizeDBArticles();
+        $lastArticle = $db->getLastsArticles(false);
         ?>
-        <a href="blog.php?article=<?php echo $nbArticles ?>" class="sousMenuArticle">Article récent</a>
+        <a href="blog.php?article=<?php echo $lastArticle['id'] ?>" class="sousMenuArticle">Article récent</a>
     </div>
 </footer>

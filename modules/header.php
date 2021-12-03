@@ -10,24 +10,12 @@
                     <ul id="sousMenu">
                         <?php
                             $db = new db();
-                            $nbArticles = $db->getSizeDBArticles();
+                            $articles = $db->getLastsArticles(true);
                         ?>
                         <li><a href="/blog.php" class="menuSelected">BLOG</a></li>
-                        <?php if($nbArticles > 0):?>
-                            <li><a href="blog.php?article=<?php echo $nbArticles ?>" class="sousMenuArticle"><?php echo $db->getShortTitleArticle($nbArticles) ?></a></li>
-                        <?php endif?>
-                        <?php if($nbArticles > 1):?>
-                            <li><a href="blog.php?article=<?php echo $nbArticles-1 ?>" class="sousMenuArticle"><?php echo $db->getShortTitleArticle($nbArticles-1) ?></a></li>
-                        <?php endif?>
-                        <?php if($nbArticles > 2):?>
-                            <li><a href="blog.php?article=<?php echo $nbArticles-2 ?>" class="sousMenuArticle"><?php echo $db->getShortTitleArticle($nbArticles-2) ?></a></li>
-                        <?php endif?>
-                        <?php if($nbArticles > 3):?>
-                            <li><a href="blog.php?article=<?php echo $nbArticles-3 ?>" class="sousMenuArticle"><?php echo $db->getShortTitleArticle($nbArticles-3) ?></a></li>
-                        <?php endif?>
-                        <?php if($nbArticles > 4):?>
-                            <li><a href="blog.php?article=<?php echo $nbArticles-4 ?>" class="sousMenuArticle"><?php echo $db->getShortTitleArticle($nbArticles-4) ?></a></li>
-                        <?php endif?>
+                        <?php foreach ($articles as $value){?>
+                            <li><a href="blog.php?article=<?php echo $value["id"] ?>" class="sousMenuArticle"><?php echo $value["shortTitle"] ?></a></li>
+                        <?php } unset($value)?>
                     </ul>
                 </li>
                 <li id="chiffres"><a href="/chiffres.php">CHIFFRES</a></li>
