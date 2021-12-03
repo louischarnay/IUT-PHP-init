@@ -16,6 +16,20 @@ class db {
         $pdo->exec("UPDATE users SET updated=date('now')");
     }
 
+    public function hashPasswords(){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        $sth = $pdo->prepare("SELECT * FROM users");
+        $sth->execute();
+        $result = $sth->fetchAll();
+        foreach($result as $item){
+            $sth = $pdo->prepare("UPDATE users SET password= :password WHERE email= :email");
+            $sth->execute([
+                'password' => password_hash($item['password'], PASSWORD_DEFAULT),
+                'email' => $item['email']
+            ]);
+        }
+    }
+
     public function fetchPerson(string $username, string $password) {
         $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
         $sth = $pdo->prepare("SELECT * FROM users WHERE email= :email");
@@ -237,19 +251,5 @@ class db {
         $sth->execute();
         $result = $sth->fetch();
         return $result['COUNT(*)'];
-    }
-    
-    public function hashPasswords(){
-        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
-        $sth = $pdo->prepare("SELECT * FROM users");
-        $sth->execute();
-        $result = $sth->fetchAll();
-        foreach($result as $item){
-            $sth = $pdo->prepare("UPDATE users SET password= :password WHERE email= :email");
-            $sth->execute([
-                'password' => password_hash($item['password'], PASSWORD_DEFAULT),
-                'email' => $item['email']
-            ]);
-        }
     }
 }
