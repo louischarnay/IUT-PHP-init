@@ -27,25 +27,12 @@
         <h2 data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out">ARTICLES RECENTS</h2>
         <?php
             $db = new db();
-            $nbArticles = $db->getSizeDBArticles();
-            echo $nbArticles;
+            $articles = $db->getLastsArticles(true);
         ?>
         <ul>
-            <?php if($nbArticles > 0):?>
-            <li><a href="blog.php?article=<?php echo $nbArticles ?>"><p class="center"><?php echo $db->getTitreArticle($nbArticles) ?></p></a></li>
-            <?php endif?>
-            <?php if($nbArticles > 1):?>
-            <li><a href="blog.php?article=<?php echo $nbArticles-1 ?>"><p class="center"><?php echo $db->getTitreArticle($nbArticles-1) ?></p></a></li>
-            <?php endif?>
-            <?php if($nbArticles > 2):?>
-            <li><a href="blog.php?article=<?php echo $nbArticles-2 ?>"><p class="center"><?php echo $db->getTitreArticle($nbArticles-2) ?></p></a></li>
-            <?php endif?>
-            <?php if($nbArticles > 3):?>
-            <li><a href="blog.php?article=<?php echo $nbArticles-3 ?>"><p class="center"><?php echo $db->getTitreArticle($nbArticles-3) ?></p></a></li>
-            <?php endif?>
-            <?php if($nbArticles > 4):?>
-            <li><a href="blog.php?article=<?php echo $nbArticles-4 ?>"><p class="center"><?php echo $db->getTitreArticle($nbArticles-4) ?></p></a></li>
-            <?php endif?>
+            <?php foreach ($articles as $value){?>
+                <li><a href="blog.php?article=<?php echo $value['id'] ?>"><p class="center"><?php echo $value['titre'] ?></p></a></li>
+            <?php } unset($value)?>
         </ul>
     </main>
 <?php else:?>

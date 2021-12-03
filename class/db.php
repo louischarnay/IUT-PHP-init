@@ -245,11 +245,12 @@ class db {
         return $result['shortTitle'];
     }
 
-    public function getSizeDBArticles(){
-        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db');
-        $sth = $pdo->prepare("SELECT COUNT(*) FROM articles");
-        $sth->execute();
-        $result = $sth->fetch();
-        return $result['COUNT(*)'];
+    public function getLastsArticles(bool $nbArticles){
+        $pdo = new PDO('sqlite:' . __DIR__ . '/../sqlite/database.db' );
+        if($nbArticles){
+            return $pdo->query("SELECT * FROM articles ORDER BY id DESC LIMIT 5");
+        }
+        $sth = $pdo->prepare("SELECT * FROM articles ORDER BY id DESC LIMIT 1");
+        return $sth->fetch();
     }
 }
