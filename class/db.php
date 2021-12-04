@@ -143,7 +143,7 @@ class db {
         else {
             return $result['address'];
         }
-    }
+    }   
 
     public function createAccount(string $email, string $name, string $lastname, string $password, string $password2, string $town, string $postal, string $adress){
         $sth = $this->pdo->prepare("SELECT * FROM users WHERE email= :email");
