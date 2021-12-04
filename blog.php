@@ -53,9 +53,7 @@
                 <div id="auteur">
                     <em>
                         By <a href="#" >Timofei Rostilov</a>
-                        <time>
-                            <span title="2018-09-03 16:15:00">2 years ago</span>
-                        </time>
+                            <div title="2018-09-03 16:15:00">2 years ago</div>
                     </em>
                 </div>
             </section>

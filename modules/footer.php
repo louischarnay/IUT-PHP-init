@@ -1,3 +1,4 @@
+<?php include_once __DIR__."/../include/config.php"?>
 <footer>
     <img src="../img/logoUCBL.png" id="logoUCBL" alt="Logo Université Claude Bernard Lyon 1">
     <div id="footerP">

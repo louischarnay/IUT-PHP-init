@@ -16,6 +16,7 @@ include 'modules/header.php';
 ?>
 <main>
     <section id="formAjout">
+        <h2 class="hidden">TITRE</h2>
         <form action="ajoutArticleTraitement.php" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>AJOUT ARTICLE</legend>
@@ -29,7 +30,7 @@ include 'modules/header.php';
                     <label for="contenuArticle" class="inFormAjout">Contenu</label>
                     <textarea name="contenuArticle" id="contenuArticle" required="required" class="inFormAjout"></textarea>
                     <label for="imageArticle" class="inFormAjout">Image</label>
-                    <input type="text" name="imageArticle" id="imageArticle" required="required" class="inFormAjout" accept="image/png">
+                    <input type="text" name="imageArticle" id="imageArticle" required="required" class="inFormAjout">
                     <div id="divButtons" class="inFormAjout">
                         <button class="envoyerContact" type="submit">Ajouter l'article</button>
                         <button class="effacerContact" type="reset">Annuler</button>
