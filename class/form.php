@@ -2,7 +2,6 @@
 include_once "class/db.php";
 
 class form {
-    private $methods;
     private $db1;
 
     public function input($name, $options){
@@ -16,7 +15,12 @@ class form {
                 $value = $_SESSION['form'][$options[0]];
             }
             else {
-                $value =  "";
+                if (isset($_COOKIE[$options[0]])){
+                    $value = $_COOKIE[$options[0]];
+                }
+                else {
+                    $value =  ""; 
+                }
             }
             $html = '<label for="' . $options[0] . '" id="' . $options[1] . '">' . $options[2] . '</label>';
             $html .= '<input type="'. $name . '" name="' . $options[0] .'" id="' . $options[0];
