@@ -17,6 +17,7 @@
 ?>
 <main>
     <section id="formConnexion">
+        <h2 class="hidden">TITRE</h2>
         <form id="formulaire" data-aos="slide-right" data-aos-duration="1000" data-aos-easing="ease-out" action="loginTraitement.php" method="post" enctype="multipart/form-data">
             <fieldset>
                 <legend>CONNEXION</legend>

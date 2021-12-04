@@ -9,9 +9,15 @@
                 <li><a href="/contact.php" <?php if($_SERVER["SCRIPT_NAME"] == "/contact.php"){
                     ?>class="active"
                         <?php } ?>>CONTACT</a></li>
-                <li><a href="/inscription.php" <?php if($_SERVER["SCRIPT_NAME"] == "/inscription.php"){
-                    ?>class="active"
-                        <?php } ?>>INSCRIPTION</a></li>
+                <?php if(isset($_SESSION["admin"])){?>
+                    <li><a href="/ajoutArticle.php" <?php if($_SERVER["SCRIPT_NAME"] == "/ajoutArticle.php"){
+                        ?>class="active"
+                            <?php } ?>>AJOUT ARTICLE</a></li>
+                <?php }else{?>
+                    <li><a href="/inscription.php" <?php if($_SERVER["SCRIPT_NAME"] == "/inscription.php"){
+                        ?>class="active"
+                            <?php } ?>>INSCRIPTION</a></li>
+                <?php }?>
                 <li id="blog"><a href="" <?php if($_SERVER["SCRIPT_NAME"] == "/blog.php"){
                     ?>class="active"
                         <?php } ?>>BLOG</a>

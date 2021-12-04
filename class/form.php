@@ -2,11 +2,8 @@
 include_once "class/db.php";
 
 class form {
-    private $methods;
-    private $db1;
 
     public function input($name, $options){
-        $db1 = new db();
         if($name =='checkbox' or $name =='radio'){     
             $html = '<input type="'. $name . '" name="' . $options[0] .'" id="' . $options[1] . '" class="' . $options[5] . '" value="' . $options[4] .'">';
             $html .= '<label for="' . $options[1] . '" id="' . $options[2] . '" class="' . $options[3] . '">' . $options[4] . '</label>';
@@ -30,4 +27,3 @@ class form {
         return $html;
     }
 }
-?>

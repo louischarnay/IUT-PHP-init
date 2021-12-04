@@ -359,6 +359,10 @@ legend{
     height: 100%;
 }
 
+.hidden{
+    display: none;
+}
+
 #formulaireConnexion{
      display: grid;
      grid-template-columns: 5% 30% 30% 30% 5%;
