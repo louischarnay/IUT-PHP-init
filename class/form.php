@@ -2,8 +2,6 @@
 include_once "class/db.php";
 
 class form {
-    private $db1;
-
     public function input($name, $options){
         if($name =='checkbox' or $name =='radio'){     
             $html = '<input type="'. $name . '" name="' . $options[0] .'" id="' . $options[1] . '" class="' . $options[5] . '" value="' . $options[4] .'">';
@@ -18,7 +16,7 @@ class form {
                     $value = $_COOKIE[$options[0]];
                 }
                 else {
-                    $value =  ""; 
+                    $value =  "";
                 }
             }
             $html = '<label for="' . $options[0] . '" id="' . $options[1] . '">' . $options[2] . '</label>';

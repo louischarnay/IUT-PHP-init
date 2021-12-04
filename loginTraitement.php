@@ -15,9 +15,9 @@ if($_POST["usernameEnregistrer"] == "pablo@test" && $_POST["mdpEnregistrer"] == 
     $_SESSION["admin"] = true;
 }
 if(isset($_POST["enregistrer"])){
-    $passwordHash = password_hash($_POST["mdpEnregistrer"], PASSWORD_DEFAULT);
+    $password = $_POST["mdpEnregistrer"];
     setcookie("usernameEnregistre", $_POST["usernameEnregistrer"], time() + 8400, '/');
-    setcookie("mdpEnregistre", $passwordHash, time() + 8400, '/');
+    setcookie("mdpEnregistre", $password, time() + 8400, '/');
 }
 else{
     setcookie("usernameEnregistre", "", time() - 3600, '/');
