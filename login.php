@@ -24,8 +24,8 @@
                 <div id="formulaireConnexion">
                     <?php
                         $f1 = new form();
-                        echo $f1->input('email', ['usernameEnregistre', 'labelEmail2', 'Login', true]);
-                        echo $f1->input('password', ['mdpEnregistre', 'labelMdp', 'Mot de passe', true]);
+                        echo $f1->input('email', ['usernameEnregistrer', 'labelEmail2', 'Login', true]);
+                        echo $f1->input('password', ['mdpEnregistrer', 'labelMdp', 'Mot de passe', true]);
                     ?>
                     <div id="divMessageIncorrect">
                         <p id="messageIncorrect">
