@@ -6,7 +6,7 @@
   </a>
 </p>
 
-> PHP pages developed during university web developement lessons.
+> First PHP project using a .sqlite db.
 
 ## Author
 
